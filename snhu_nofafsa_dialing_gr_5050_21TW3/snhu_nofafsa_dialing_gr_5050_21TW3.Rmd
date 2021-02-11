@@ -1,0 +1,81 @@
+---
+title: "Southern New Hampshire University"
+subtitle: "ReMap Experiment: No FAFSA (GR) Dialing"
+author: "Karen West |  k.west2@snhu.edu"
+date: "Updated: `r Sys.Date()`"
+output:
+  html_document: 
+    css: snhu-remap-test-style.css
+    include:
+      in_header: insert-logo.html
+---
+## Overview `r fontawesome::fa("binoculars")`
+<br>
+
+```{r echo=FALSE, out.width = "100%", fig.align='center'}
+knitr::include_graphics(here::here("imgs", "test_summary.png"))
+```
+
+<br>
+
+__Theory:__  One of the biggest impediments to students who plan on using financial aid is their inability to quickly complete the Free Application for Federal Student Aid (FAFSA) as part of the admission process.  
+
+__Hypothesis:__ Outreaching students who have not completed their FAFSA *increases* their likelihood to complete their FAFSA.
+<br>
+<br>
+
+
+## Test Design `r fontawesome::fa("flask")`
+<br>
+
+__Test Metric:__ FAFSA Completion Rate, calculated as:
+$$FAFSA Completion Rate  = \sum_{n=FAFSA Complete} / \sum_{n=Total Eligible to Complete FAFSA}$$
+
+__Testing Groups:__ Of all eligible members of the population (full criteria list below), control and experiment groups were assigned according to testing cells on the Unify contact.
+
++ Control Group: **50%** of eligible dialing list - these were *not dialed*
++ Experiment Group: **50%** of eligible dialing list - these were *dialed*
+
+Those in the experiment group were dialed weekly throughout the experiment timeframe.
+
+**Experiment Population Eligibility (AKA InPopulation):**
+
++ GR prospective student with open Admission opportunity for the 21EW3 term 
++ In Applied, App In Progress or Accepted Stage 
++ Has not completed a 20/21 FAFSA or has only completed the "wrong" FAFSA year (only completed 21-22 FAFSA form and must complete 20-21)
++ need to edit: Prospective student has either indicated they plan on using financial aid (per Financial Plan field in Unify Admission Opportunity), or Financial Plan field is blank
++ Is not Course-Work Only (CWO) or a Guild student
+
+## Outcomes & Learnings `r fontawesome::fa("chart-bar")`
+
+__Experiment Results:__
+
++ __Overall Results:__ As of , the FAFSA completion rate for the test group was **percentage points higher (% change)**. This difference is not statistically significant at 95% confidence.
+
++ __Enroll Rate:__ The InPopulation to enroll rate (# of enrolls / # of InPopulation) was also **percentage points higher** for the test group versus the control, meaning that the increase to enroll rate was virtually equivalent to the increases in FAFSA completion rate.  
+
+
+```{r echo=FALSE, out.width = "80%", fig.align='center'}
+knitr::include_graphics(here::here("imgs", ""))
+```
+
+
+:::{.note}
+__`r fontawesome::fa("readme")` NOTE:__  Enroll rate considers Day 15 enrolls only
+:::
+
+<br>
+
+__Learnings:__
+
++ __Wrong FAFSA:__ need to edit: Those that originally submitted the wrong FAFSA (filled out 21-22 instead of 20-21) completed a FAFSA at nearly twice the rate, but there was no difference between test and control groups.
++ __Enrolls Without FAFSA:__ **x%** of all enrollments that occurred within this population (Control + Experiment) enrolled without completing a FAFSA
+
+__Next Steps:__
+
+__*Additional Experimentation.*__ 
+
+<br>
+<br>
+
+
