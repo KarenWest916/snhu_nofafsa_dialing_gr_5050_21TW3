@@ -9,6 +9,12 @@ library(DBI)
 library(odbc)
 library(tidyverse)
 library(gt)
+library(dplyr)
+library(snhuthemes)
+library(tidymodels)
+library(lubridate)
+library(airtabler)
+library(ggtext)
 
 knitr::opts_chunk$set(
   echo = FALSE,
@@ -22,7 +28,7 @@ knitr::opts_chunk$set(
 
 
 
-#database connection
+#database connection to 50222
 ```{r connection-string,include=FALSE}
 #database connection
 con_data_reporting <- dbConnect(odbc::odbc(), .connection_string = "Driver={SQL Server Native Client 11.0};\n                          Server=COCE-DS-LSTNR,50222;\n                          Database=Data_Reporting;\n                          trusted_connection=yes;")
@@ -40,10 +46,48 @@ nofafsa_df <- dbGetQuery(
 ```
 
 
+
+#database connection 50333
+```{r connection-string,include=FALSE}
+#database connection
+con_data_reporting <- dbConnect(odbc::odbc(), .connection_string = "Driver={SQL Server Native Client 11.0};\n                          Server=COCE-LSTNR,50333;\n                          Database=AARDW;\n                          trusted_connection=yes;")
+```
+
+
+
+#importing Unify IDs from call logs if they were dialed in no fafsa dialer
+```{r}
+call_logs <- dbGetQuery(
+  conn = con_data_reporting, 
+  statement = read_file(
+    file = here::here("sql","call_logs.sql")
+  )
+) %>% as_tibble()
+```
+
+
+
+
+# joining call logs to 50222 data
+```{r}
+nofafsa_df_calls <-
+  as_tibble() %>%
+  left_join(x = nofafsa_df,
+          y = call_logs,
+          by = c("ContactID" = "UnifySalesforceContactID")) 
+#%>% 
+  #filter(UnifySalesforceContactID != "Unknown")
+  
+```
+
+
+
+
+
 #Aggregate test results to date
 ```{r}
 nofafsa_results <- 
-  nofafsa_df %>% 
+  nofafsa_df_calls %>% 
   #filter(fafsa_completed==0) %>% 
   group_by(testing_group) %>% 
   summarise(
@@ -81,7 +125,7 @@ nofafsa_results <-
    tab_header(
     title = md("21TW3 No FAFSA Dialing Grad: Test vs. Control")) %>% 
     tab_source_note(
-    source_note = c("Data Source:  Unify Opportunity, SSR - retrieved on 2/11/21"))
+    source_note = c("Data Source:  Unify Opportunity, SSR - retrieved on 2/15/21"))
   #%>%
      #data_color(columns = vars(`Melt Rate`), colors = "lightgreen") %>%
     #tab_options(

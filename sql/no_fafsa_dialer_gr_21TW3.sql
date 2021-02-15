@@ -50,9 +50,9 @@ FROM Data_Reporting.[dbo].[Remap_NoFAFSA_Dialer] f0
 
 
 --take most recent record from test table
-INNER JOIN  
+inner JOIN  
 (
-SELECT ContactID, MAX(DateofEntry)[MaxDate]
+SELECT DISTINCT ContactID, MAX(DateofEntry)[MaxDate]
 FROM 
 Data_Reporting.[dbo].[Remap_NoFAFSA_Dialer]
 WHERE Acad = 'GR'
@@ -61,7 +61,7 @@ WHERE Acad = 'GR'
 AND Icosagonain_Expirmentation_Cell__c IS NOT null
 GROUP BY ContactID
 ) AS t_date ON t_date.ContactID = f0.ContactID AND t_date.MaxDate = F0.DateofEntry
-INNER JOIN  
+inner JOIN  
 
  (
 
@@ -84,8 +84,9 @@ INNER JOIN
 --Base set of IDs in experiment population
 SELECT DISTINCT ContactID, C.Colleague_ID__c,  SSR.VerificationType
 FROM  Data_Reporting.[dbo].[Remap_NoFAFSA_Dialer] F
-INNER JOIN UnifyStaging.DBO.Contact C ON f.ContactID = c.Id
-INNER JOIN  (
+inner JOIN UnifyStaging.DBO.Contact C ON f.ContactID = c.Id
+
+inner JOIN  (
 SELECT DISTINCT FA.[Student ID] AS StudentID, FA.[Verification Type] AS VerificationType
 FROM  msr.fa.CRILimboDocDetails FA
 WHERE   [Planned Start Term] in ('21TW3')
@@ -93,12 +94,13 @@ WHERE   [Planned Start Term] in ('21TW3')
 WHERE Acad = 'GR'
 ) AS curr_fafsa_status ON curr_fafsa_status.ContactID = o.Contact__c
 
- WHERE rt.name = 'Admission Opportunity'
+WHERE rt.name = 'Admission Opportunity'
+
 
  ) AS f ON f.Contact__c = f0.ContactID
-INNER JOIN Data_Reporting.mstr.DimStudent ds ON ds.Studentid = f.Contact__c
-INNER JOIN UnifyStaging.dbo.Opportunity o ON o.id = f.Id
-INNER JOIN UnifyStaging.dbo.Contact c ON c.id = f.Contact__c
+inner JOIN Data_Reporting.mstr.DimStudent ds ON ds.Studentid = f.Contact__c
+inner JOIN UnifyStaging.dbo.Opportunity o ON o.id = f.Id
+inner JOIN UnifyStaging.dbo.Contact c ON c.id = f.Contact__c
 --INNER JOIN Data_Reporting.MSTR.DimStudent df ON df.Studentid  = c.id
 inner JOIN UnifyStaging.dbo.hed__Term__c t ON t.id = o.Term__c
 WHERE 
@@ -107,3 +109,4 @@ f.RN = 1
 and
 
 (t.Name ='21TW3')
+--AND f0.ContactID = '0033l00002kDCEDAA4'
