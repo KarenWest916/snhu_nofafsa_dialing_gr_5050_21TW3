@@ -43,8 +43,9 @@ CASE WHEN o.App_in_Progress_Date_Time__c IS NOT NULL THEN 1 ELSE 0 END AS AppIPs
 CASE WHEN o.Accepted_Date_Time__c IS NOT NULL THEN 1 ELSE 0 END AS Accepts,
 CASE WHEN o.Registered_Date_Time__c IS NOT NULL THEN 1 ELSE 0 END AS Regs,
 CASE WHEN o.Registered_Date_Time__c IS NOT NULL AND o.stagename='Closed Won' THEN 1 ELSE 0 END AS Enrolls,
-CASE WHEN o.Started_Date_Time__c IS NOT NULL THEN 1 ELSE 0 END AS Starts
-
+CASE WHEN o.Started_Date_Time__c IS NOT NULL THEN 1 ELSE 0 END AS Starts,
+CASE WHEN (f.VerificationType NOT LIKE '%No FAFSA Yet%' AND o.Registered_Date_Time__c IS NOT NULL) THEN 1 ELSE 0 END AS fafsa_Regs,
+CASE WHEN (f.VerificationType LIKE '%No FAFSA Yet%' AND o.Registered_Date_Time__c IS NOT NULL) THEN 1 ELSE 0 END AS no_fafsa_Regs
 
 FROM Data_Reporting.[dbo].[Remap_NoFAFSA_Dialer] f0 
 

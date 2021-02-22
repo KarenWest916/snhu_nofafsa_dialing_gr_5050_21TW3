@@ -13,7 +13,7 @@ output:
 <br>
 
 ```{r echo=FALSE, out.width = "100%", fig.align='center'}
-knitr::include_graphics(here::here("imgs", "test_summary.png"))
+knitr::include_graphics(here::here("imgs/nofafsa_test_summary.png"))
 ```
 
 <br>
@@ -36,11 +36,11 @@ __Testing Groups:__ Of all eligible members of the population (full criteria lis
 + Control Group: **50%** of eligible dialing list - these were *not dialed*
 + Experiment Group: **50%** of eligible dialing list - these were *dialed*
 
-Those in the experiment group were dialed weekly throughout the experiment timeframe.
+Those in the experiment group were dialed weekly throughout the experiment timeframe with the exception of the final week prior to term start.
 
 **Experiment Population Eligibility (AKA InPopulation):**
 
-+ GR prospective student with open Admission opportunity for the 21EW3 term 
++ GR prospective student with open Admission opportunity for the 21TW3 term 
 + In Applied, App In Progress or Accepted Stage 
 + Has not completed a 20/21 FAFSA or has only completed the "wrong" FAFSA year (only completed 21-22 FAFSA form and must complete 20-21)
 + need to edit: Prospective student has either indicated they plan on using financial aid (per Financial Plan field in Unify Admission Opportunity), or Financial Plan field is blank
@@ -50,26 +50,26 @@ Those in the experiment group were dialed weekly throughout the experiment timef
 
 __Experiment Results:__
 
-+ __Overall Results:__ As of , the FAFSA completion rate for the test group was **percentage points higher (% change)**. This difference is not statistically significant at 95% confidence.
++ __Overall Results:__ As of 2/22/21, the FAFSA completion rate for the test group was **1.2 percentage points lower (-4.8% change)**. This difference is not statistically significant at 95% confidence.
 
-+ __Enroll Rate:__ The InPopulation to enroll rate (# of enrolls / # of InPopulation) was also **percentage points higher** for the test group versus the control, meaning that the increase to enroll rate was virtually equivalent to the increases in FAFSA completion rate.  
++ __Reg Rate:__ The InPopulation to reg rate (# of regs / # of InPopulation) was nearly flat at **0.1 percentage points lower** for the test group versus the control. Out of those that completed a FAFSA, the reg rate was **0.3 percentage points higher** for the test group versus the control. Neither of these differences is statistically significant.
 
 
 ```{r echo=FALSE, out.width = "80%", fig.align='center'}
-knitr::include_graphics(here::here("imgs", ""))
+knitr::include_graphics(here::here("imgs/nofafsa_21TW3_overall_20210222.png", ""))
 ```
 
 
 :::{.note}
-__`r fontawesome::fa("readme")` NOTE:__  Enroll rate considers Day 15 enrolls only
+__`r fontawesome::fa("readme")` NOTE:__  Enroll rate considers Day 15 enrolls only (not shown yet)
 :::
 
 <br>
 
 __Learnings:__
 
-+ __Wrong FAFSA:__ need to edit: Those that originally submitted the wrong FAFSA (filled out 21-22 instead of 20-21) completed a FAFSA at nearly twice the rate, but there was no difference between test and control groups.
-+ __Enrolls Without FAFSA:__ **x%** of all enrollments that occurred within this population (Control + Experiment) enrolled without completing a FAFSA
++ __Wrong FAFSA:__ Do we need this?? Those that originally submitted the wrong FAFSA (filled out 21-22 instead of 20-21) completed a FAFSA at nearly twice the rate, but there was no difference between test and control groups.
++ __Enrolls Without FAFSA:__ **17.3%** of all enrollments that occurred within this population (Control + Experiment) enrolled without completing a FAFSA
 
 __Next Steps:__
 
