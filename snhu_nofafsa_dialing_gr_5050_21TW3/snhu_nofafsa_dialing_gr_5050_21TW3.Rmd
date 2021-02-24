@@ -1,6 +1,6 @@
 ---
 title: "Southern New Hampshire University"
-subtitle: "ReMap Experiment: No FAFSA (GR) Dialing (DRAFT)"
+subtitle: "[DRAFT] ReMap Experiment: No FAFSA (GR) Dialing"
 author: 
 - "Karen West |  k.west2@snhu.edu"
 - "Eric Gustafson |  e.gustafson@snhu.edu"
@@ -49,7 +49,7 @@ Those in the experiment group were dialed weekly throughout the experiment timef
 + In Applied, App In Progress or Accepted Stage 
 + Has not completed a 20/21 FAFSA or has only completed the "wrong" FAFSA year (only completed 21-22 FAFSA form and must complete 20-21)
 + Prospective students that have not indicated their sole financial plan as being "Out of Pocket" or there is no financial plan indicated.
-+ Is not Course-Work Only (CWO) or a Guild student
++ Is not Course-Work Only (CWO) or a Guild student, or on the CMHC waitlist
 
 <br>
 
@@ -83,6 +83,9 @@ __`r fontawesome::fa("readme")` NOTE:__  Enroll rate considers Day 15 enrolls on
 __*Additional Experimentation.*__ 
 
 <br>
-<br>
+
+## Glossary of Terms `r fontawesome::fa("journal-whills")`
+
+__`term we are defining`__ - Definition of the term.
 
 
