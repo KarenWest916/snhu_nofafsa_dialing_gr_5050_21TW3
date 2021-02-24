@@ -1,13 +1,18 @@
 ---
 title: "Southern New Hampshire University"
 subtitle: "ReMap Experiment: No FAFSA (GR) Dialing (DRAFT)"
-author: "Karen West |  k.west2@snhu.edu"
+author: 
+- "Karen West |  k.west2@snhu.edu"
+- "Eric Gustafson |  e.gustafson@snhu.edu"
 date: "Updated: `r Sys.Date()`"
 output:
   html_document: 
     css: !expr here::here("markdown/snhu-remap-test-style.css")
     include:
       in_header: !expr here::here("markdown/insert-logo.html")
+    toc: true
+    toc_float: true
+    
 ---
 ## Overview `r fontawesome::fa("binoculars")`
 <br>
@@ -42,21 +47,23 @@ Those in the experiment group were dialed weekly throughout the experiment timef
 
 + GR prospective student with open Admission opportunity for the 21TW3 term 
 + In Applied, App In Progress or Accepted Stage 
-+ **is this applicable?**Has not completed a 20/21 FAFSA or has only completed the "wrong" FAFSA year (only completed 21-22 FAFSA form and must complete 20-21)
++ Has not completed a 20/21 FAFSA or has only completed the "wrong" FAFSA year (only completed 21-22 FAFSA form and must complete 20-21)
 + Prospective students that have not indicated their sole financial plan as being "Out of Pocket" or there is no financial plan indicated.
 + Is not Course-Work Only (CWO) or a Guild student
 
+<br>
+
 ## Outcomes & Learnings `r fontawesome::fa("chart-bar")`
 
-__Experiment Results:__
+### Experiment Results
 
 + __Overall Results:__ As of 2/22/21, the FAFSA completion rate for the test group was **1.2 percentage points lower (-4.8% change)**. This difference is not statistically significant at 95% confidence.
 
 + __Reg Rate:__ The InPopulation to reg rate (# of regs / # of InPopulation) was nearly flat at **0.1 percentage points lower** for the test group versus the control. Out of those that completed a FAFSA, the reg rate was **0.3 percentage points higher** for the test group versus the control. Neither of these differences are statistically significant.
 
 
-```{r echo=FALSE, out.width = "80%", fig.align='center'}
-knitr::include_graphics(here::here("imgs/nofafsa_21TW3_overall_20210222.png", ""))
+```{r echo=FALSE, out.width = "100%", fig.align='center'}
+knitr::include_graphics(here::here("imgs/nofafsa_21TW3_overall_20210223.png", ""))
 ```
 
 
@@ -66,13 +73,13 @@ __`r fontawesome::fa("readme")` NOTE:__  Enroll rate considers Day 15 enrolls on
 
 <br>
 
-__Learnings:__
+### Learnings
 
-+ __Wrong FAFSA:__ Do we need this?? Those that originally submitted the wrong FAFSA (filled out 21-22 instead of 20-21) completed a FAFSA at nearly twice the rate, but there was no difference between test and control groups.
++ __Wrong FAFSA:__ Those that originally submitted the wrong FAFSA (filled out 21-22 instead of 20-21) completed a FAFSA **more than three times** the rate (**72%** vs. **23%**) of anyone else in the population who did not fill out a FAFSA, but there was very little difference between test and control groups.  This indicates that those prospective students who are engaged enough to complete one version of the FAFSA (albeit the "wrong" one), will complete the correct FAFSA on their own and appear unlikely to be influenced by outreach campaigns like this one.  For reference, note that Undergrad "Wrong FAFSA" students only completed their FAFSAs at a rate of about two times higher than the rest of the population:  [No FAFSA UG Dialing 21EW3 Experiment](file://millyard.snhu.edu/Data/DataWebServices/SNHU%20Metrics/Analytics/HTML/remap-nofafsa_dialing_ug_21EW3-20201114.html)]
+
 + __Enrolls Without FAFSA:__ **17.3%** of all enrollments that occurred within this population (Control + Experiment) enrolled without completing a FAFSA
 
-__Next Steps:__ Probably stop calling people.
-
+### Next Steps
 __*Additional Experimentation.*__ 
 
 <br>
