@@ -67,9 +67,9 @@ knitr::include_graphics(here::here("imgs/nofafsa_21TW3_overall_20210224.png", ""
 ```
 
 
-:::{.note}
-__`r fontawesome::fa("readme")` NOTE:__  Enroll rate considers Day 15 enrolls only (not shown yet)
-:::
+<!-- :::{.note} -->
+<!-- __`r fontawesome::fa("readme")` NOTE:__  Enroll rate considers Day 15 enrolls only (not shown yet) -->
+<!-- ::: -->
 
 <br>
 
@@ -86,6 +86,6 @@ __*Additional Experimentation.*__
 
 ## Glossary of Terms `r fontawesome::fa("journal-whills")`
 
-__`term we are defining`__ - Definition of the term.
+__`FAFSA`__ - Free Application for Federal Student Aid
 
 
