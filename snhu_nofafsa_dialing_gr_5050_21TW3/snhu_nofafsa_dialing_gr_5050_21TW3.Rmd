@@ -75,12 +75,12 @@ knitr::include_graphics(here::here("imgs/nofafsa_21TW3_overall_20210224.png", ""
 
 ### Learnings
 
-+ __Wrong FAFSA:__ Those that originally submitted the wrong FAFSA (filled out 21-22 instead of 20-21) completed a FAFSA **more than three times** the rate (**72%** vs. **23%**) of anyone else in the population who did not fill out a FAFSA, but there was very little difference between test and control groups.  This indicates that those prospective students who are engaged enough to complete one version of the FAFSA (albeit the "wrong" one), will complete the correct FAFSA on their own and appear unlikely to be influenced by outreach campaigns like this one.  For reference, note that Undergrad "Wrong FAFSA" students only completed their FAFSAs at a rate of about two times higher than the rest of the population:  [No FAFSA UG Dialing 21EW3 Experiment](file://millyard.snhu.edu/Data/DataWebServices/SNHU%20Metrics/Analytics/HTML/remap-nofafsa_dialing_ug_21EW3-20201114.html)]
++ __Wrong FAFSA:__ Those that originally submitted the wrong FAFSA (filled out 21-22 instead of 20-21) completed a FAFSA **more than three times** the rate (**72%** vs. **23%**) of anyone else in the population who did not fill out a FAFSA, but there was very little difference between test and control groups.  This indicates that those prospective students who are engaged enough to complete one version of the FAFSA (albeit the "wrong" one), will complete the correct FAFSA on their own and appear unlikely to be influenced by outreach campaigns like this one.  For reference, note that Undergrad "Wrong FAFSA" students only completed their FAFSAs at a rate of about two times higher than the rest of the population:  [No FAFSA UG Dialing 21EW3 Experiment](file://millyard.snhu.edu/Data/DataWebServices/SNHU%20Metrics/Analytics/HTML/remap-nofafsa_dialing_ug_21EW3-20201114.html)
 
 + __Enrolls Without FAFSA:__ **45%** of all enrollments that occurred within this population (Control + Experiment) enrolled without completing a FAFSA.
 
 ### Next Steps
-__*Additional Experimentation.*__ 
+__*Additional Experimentation.*__ The funding dialer did not have a positive impact, but a similar dialer experiment in UG for 21EW4 that included a funding task showed a positive impact for those that received a funding task and no dialer. Additional experiments to be set up for a funding task experiment for GR.
 
 <br>
 
